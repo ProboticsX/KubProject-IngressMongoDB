@@ -5,6 +5,7 @@ metadata:
   labels:
     app: mongo-express
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: mongo-express
@@ -42,7 +43,7 @@ metadata:
 spec:
   selector:
     app: mongo-express
-  type: LoadBalancer
+  type: LoadBalancer  
   ports:
     - protocol: TCP
       port: 8081
